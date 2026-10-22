@@ -1,42 +1,25 @@
 # Ciudad Libre — Android Open-World Prototype
 
-An original Android-friendly open-world action game concept inspired by sandbox crime games. This project is not GTA 6 and does not use GTA characters, maps, logos, music, or other proprietary assets.
+**Ciudad Libre** is an original, mobile-first third-person city sandbox concept inspired by open-world action games. It is not GTA 6 and contains no GTA characters, maps, branding, music, or copied proprietary assets.
 
-## Prototype goals
-- A compact fictional city district designed for mobile performance.
-- Third-person player movement and a follow camera.
-- Drivable vehicles with touch controls.
-- Mission markers, simple objectives, and pursuit mechanics.
-- Mobile-first interface and scalable quality settings.
-- Original art, names, story, and audio.
+## Current contents
+- A Godot 4 project shell configured for the mobile renderer and landscape layout.
+- A procedural low-poly city block built from primitive meshes.
+- Third-person character movement.
+- A simple arcade car you can enter, drive, and exit.
+- Touchscreen direction buttons, camera drag, and PC keyboard/mouse controls.
+- One checkpoint mission with a credit reward.
 
-## Recommended engine
-**Godot 4.x** is the recommended starting point for an Android-first prototype. Configure Godot's Android export setup to build an APK. This repository currently contains the design and implementation plan, not a compiled APK.
+## Open the project
+1. Install Godot 4.x on a computer.
+2. Download or clone this repository and open the folder containing `project.godot`.
+3. Press Play to run `scenes/Main.tscn`.
+4. On PC, use **WASD** to move, **E** to enter/exit the car, and hold the right mouse button while dragging to look around.
+5. On a touchscreen, use the arrow buttons to move/drive, drag the screen to look around, and tap the action button near the car to enter or exit.
+6. Drive or walk to the glowing blue marker to complete the first mission.
 
-## Suggested project layout
-```
-CiudadLibre/
-  project.godot
-  scenes/Main.tscn
-  scenes/CityBlock.tscn
-  scenes/Player.tscn
-  scenes/Vehicle.tscn
-  scripts/player_controller.gd
-  scripts/mobile_controls.gd
-  scripts/vehicle_controller.gd
-  scripts/mission_manager.gd
-  scripts/wanted_system.gd
-  docs/GAME_DESIGN.md
-  docs/IMPLEMENTATION_PLAN.md
-```
+## Android build
+Configure Android export templates, SDK/JDK paths, package name, app icon, and signing in Godot before exporting an APK. Test on a real device and profile performance before distributing.
 
-## Milestones
-1. Bootable Android shell, main menu, pause and settings.
-2. Walkable city block, third-person camera and touch controls.
-3. Enterable vehicle and arcade driving.
-4. One complete timed delivery mission and rewards.
-5. Wanted meter and basic pursuit/search behavior.
-6. On-device performance testing, save/load and Android export.
-
-## Status
-Planning/prototype foundation only. No playable build or APK is included yet. The goal is to build and test a small polished slice first rather than claim to recreate a full AAA game in one pass.
+## Status and limitations
+This is an early playable-prototype code foundation, not an AAA-scale game. The code has been added to the repository but has **not been built, tested in Godot, or exported to an APK in this session**. The city, character, car, and mission use simple procedural shapes and should be replaced or expanded with original, optimized assets over time.
