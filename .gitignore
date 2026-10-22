@@ -1,5 +1,8 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+.godot/
+.import/
+.export/
+android/build/
+*.apk
+*.aab
+*.keystore
+*.jks
